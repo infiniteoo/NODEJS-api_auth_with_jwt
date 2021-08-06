@@ -9,6 +9,12 @@ app.get("/api", (req, res) => {
   });
 });
 
+app.post("/api/posts", (req, res) => {
+  res.json({
+    message: "post created",
+  });
+});
+
 app.listen(5000, () => {
   console.log("server started on port 5000");
 });
