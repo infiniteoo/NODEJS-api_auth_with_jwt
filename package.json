@@ -2,7 +2,7 @@
   "name": "NODEJS-api_auth_with_jwt",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/infiniteoo/NODEJS-api_auth_with_jwt/issues"
   },
-  "homepage": "https://github.com/infiniteoo/NODEJS-api_auth_with_jwt#readme"
+  "homepage": "https://github.com/infiniteoo/NODEJS-api_auth_with_jwt#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
 }
