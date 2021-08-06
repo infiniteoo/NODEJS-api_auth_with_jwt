@@ -9,7 +9,7 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.post("/api/posts", (req, res) => {
+app.post("/api/posts", verifyToken, (req, res) => {
   res.json({
     message: "post created",
   });
@@ -29,6 +29,21 @@ app.post("/api/login", (req, res) => {
     });
   });
 });
+
+// format of token
+// authorization: bearer <access_token>
+
+//verify token
+function verifyToken(req, res, next) {
+  // get auth header
+  const bearerHeader = req.headers["authorization"];
+  // check if beareris undefined
+  if (typeof bearerHeader !== "undefined") {
+  } else {
+    // forbidden
+    res.sendStatus(403);
+  }
+}
 
 app.listen(5000, () => {
   console.log("server started on port 5000");
